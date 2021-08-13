@@ -37,7 +37,7 @@
 	if ($count == 1) {
 	echo "<div class='alert alert-warning mt-4' role='alert'>
 					<p>That Username is already registered.</p>
-					<p><a href='login.html'>Please login here</a></p>
+					<p><a href='../html/login.html'>Please login here</a></p>
 				</div>";
 	} else {
 
@@ -52,7 +52,7 @@
 
 	if (mysqli_query($conn, $query)) {
 		echo "<div class='alert alert-success mt-4' role='alert'><h3>Your account has been created.</h3>
-		<a class='btn btn-outline-primary' href='login.html' role='button'>Login</a></div>";
+		<a class='btn btn-outline-primary' href='../html/login.html' role='button'>Login</a></div>";
 		} else {
 			echo "Error: " . $query . "<br>" . mysqli_error($conn);
 		}

@@ -31,10 +31,10 @@ If the username don't exist, the data from the form is sent to the
 database and the account is created
 */
 
-$Name = $_POST['Name'];
-$Email = $_POST['Email'];
-$Mobile = $_POST['Mobile'];
-$Address = $_POST['Address'];
+$Name = $_POST['name'];
+$Email = $_POST['email'];
+$Mobile = $_POST['mobile'];
+$Address = $_POST['address'];
 $UserID = $_SESSION['UserID'];
 
 

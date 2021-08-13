@@ -15,7 +15,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
     die("Connection failed: " . mysqli_connect_error());
   }
 
-  $sql = "DELETE FROM opportunities WHERE OpportunityId=$id";
+  $sql = "DELETE FROM opportunities WHERE OpportunityID=$id";
         $result = mysqli_query($conn, $sql); // using mysqli_query
         //redirecting to the display page
         header("Location: opportunities.php");

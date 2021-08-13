@@ -22,7 +22,7 @@ if(isset($_POST['update']))
     $stage = mysqli_real_escape_string($conn, $_POST['stage']);
 
 		//updating the table
-		$result = mysqli_query($conn, "UPDATE opportunities SET Name='$name',Amount='$amount',Stage='$stage' WHERE OpportunityId=$id");
+		$result = mysqli_query($conn, "UPDATE opportunities SET Name='$name',Amount='$amount',Stage='$stage' WHERE OpportunityID=$id");
 
 		//redirecting to the opportunities page
 		header("Location: opportunities.php");
@@ -34,7 +34,7 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($conn, "SELECT * FROM opportunities WHERE OpportunityId=$id");
+$result = mysqli_query($conn, "SELECT * FROM opportunities WHERE OpportunityID=$id");
 
 while($res = mysqli_fetch_array($result))
 {

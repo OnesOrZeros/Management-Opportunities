@@ -23,7 +23,7 @@ if(isset($_POST['update']))
     $mobile = mysqli_real_escape_string($conn, $_POST['mobile']);
 
 		//updating the table
-		$result = mysqli_query($conn, "UPDATE accounts SET Name='$name',Address='$address',Email='$email',Mobile='$mobile' WHERE AccountId=$id");
+		$result = mysqli_query($conn, "UPDATE accounts SET Name='$name',Address='$address',Email='$email',Mobile='$mobile' WHERE AccountID=$id");
 
 		//redirectig to the display page.
 		header("Location: accounts.php");
@@ -35,7 +35,7 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($conn, "SELECT * FROM accounts WHERE AccountId=$id");
+$result = mysqli_query($conn, "SELECT * FROM accounts WHERE AccountID=$id");
 
 while($res = mysqli_fetch_array($result))
 {

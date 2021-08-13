@@ -12,12 +12,12 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 //getting id from url
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $_SESSION['AccountId'] = $id;
+    $_SESSION['AccountID'] = $id;
 
 }
 
-    $AccountId = $_SESSION['AccountId'];
-    $sql = "SELECT * FROM opportunities WHERE AccountId = $AccountId  ORDER BY OpportunityId DESC";
+    $AccountID = $_SESSION['AccountID'];
+    $sql = "SELECT * FROM opportunities WHERE AccountID = $AccountID  ORDER BY OpportunityID DESC";
     $result = mysqli_query($conn, $sql); // using mysqli_query
 
 ?>
@@ -44,11 +44,11 @@ if (isset($_GET['id'])) {
 <?php
     if (isset($_SESSION['loggedin'])) {
 
-        require_once('../assets/header/header3.html');
+        require_once('../assets/header/header2.html');
 
     }
     else {
-      require_once('../assets/header/header4.html');
+      require_once('../assets/header/header3.html');
     }
 
 ?>
@@ -83,8 +83,8 @@ if (isset($_GET['id'])) {
     echo "<td>".$res['Name']."</td>";
     echo "<td>".$res['Amount']."</td>";
     echo "<td>".$res['Stage']."</td>";
-    echo "<td> <a href=\"editOpportunity.php?id=$res[OpportunityId]\" onClick=\"return confirm('Do you want to Update this Opportunity?')\">Update</a>
-    | <a href=\"deleteOpportunity.php?id=$res[OpportunityId]\" onClick=\"return confirm('Are you sure you want to delete this Opportunity?')\">Delete</a></td>";
+    echo "<td> <a href=\"editOpportunity.php?id=$res[OpportunityID]\" onClick=\"return confirm('Do you want to Update this Opportunity?')\">Update</a>
+    | <a href=\"deleteOpportunity.php?id=$res[OpportunityID]\" onClick=\"return confirm('Are you sure you want to delete this Opportunity?')\">Delete</a></td>";
   }
   ?>
   </tbody>

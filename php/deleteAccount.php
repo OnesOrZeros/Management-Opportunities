@@ -15,7 +15,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
     die("Connection failed: " . mysqli_connect_error());
   }
 
-  $sql = "DELETE FROM accounts WHERE AccountId=$id";
+  $sql = "DELETE FROM accounts WHERE AccountID=$id";
         $result = mysqli_query($conn, $sql); // using mysqli_query
         //redirecting to the display page
         header("Location: accounts.php");

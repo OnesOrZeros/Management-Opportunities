@@ -46,7 +46,7 @@ $result = mysqli_query($conn, $sql); // using mysqli_query
 ?>
 </div>
 <div class="title">
-<form action="../php/addAccount.php" method="POST">
+<form action="../php/addAccounts.php" method="POST">
   <h3>Create Account</h3><br>
 	<input type="text" placeholder="Name" name="name" required>
 	<input type="text" placeholder="Address" name="address" required>
@@ -77,8 +77,10 @@ $result = mysqli_query($conn, $sql); // using mysqli_query
     echo "<td>".$res['Address']."</td>";
     echo "<td>".$res['Email']."</td>";
     echo "<td>".$res['Mobile']."</td>";
-    echo "<td> <a href=\"editAccount.php?id=$res[AccountId]\" onClick=\"return confirm('Do you want to Update this Account?')\">Update</a>
-    | <a href=\"deleteAccount.php?id=$res[AccountId]\" onClick=\"return confirm('Are you sure you want to delete this Account?')\">Delete</a></td>";
+    echo "<td> <a href=\"editAccount.php?id=$res[AccountID]\" onClick=\"return confirm('Do you want to Update this Account?')\">Update</a>
+    | <a href=\"deleteAccount.php?id=$res[AccountID]\" onClick=\"return confirm('Are you sure you want to delete this Account?')\">Delete</a>
+    | <a href=\"opportunities.php?id=$res[AccountID]\" onClick=\"return confirm('Do you want view opportunities to this Account?')\">Opportunity</a>
+    </td>";
   }
   ?>
   </tbody>

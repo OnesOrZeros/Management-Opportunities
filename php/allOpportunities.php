@@ -10,8 +10,8 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
   }
 
 
-    $UserId = $_SESSION['UserId'];
-    $sql = "SELECT * FROM opportunities WHERE UserId = $UserId  ORDER BY OpportunityId DESC";
+    $UserID = $_SESSION['UserID'];
+    $sql = "SELECT * FROM opportunities WHERE UserID = $UserID  ORDER BY OpportunityID DESC";
     $result = mysqli_query($conn, $sql);
 
 ?>
@@ -38,11 +38,11 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 <?php
     if (isset($_SESSION['loggedin'])) {
 
-        require_once('../assets/header/header3.html');
+        require_once('../assets/header/header2.html');
 
     }
     else {
-      require_once('../assets/header/header4.html');
+      require_once('../assets/header/header3.html');
     }
 
 ?>

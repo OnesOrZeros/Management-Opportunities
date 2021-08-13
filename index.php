@@ -13,7 +13,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-
+	
 
 <header>
 <div class="admin">
@@ -23,10 +23,10 @@ session_start();
 </div>
 <div>
 <?php
-    if (isset($_SESSION['loggedin'])) {
+    if (isset($_SESSION['loggedin'])) {  
      //Display this header when user has logged in
         require_once('assets/header/header0.html');
-
+    
     }
     else {
       //Display this header when user is not logged in
@@ -40,4 +40,4 @@ session_start();
 </div>
 </header>
 </body>
-</html>
+</html> 

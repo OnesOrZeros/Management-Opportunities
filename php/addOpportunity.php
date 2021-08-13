@@ -15,7 +15,7 @@ if(isset($_POST['add']))
 {
 ////////////Add Opportunity to database
 // Query to check if the opportunity exist and belongs to this user
-$checkOpportunityName = "SELECT * FROM opportunities WHERE Name = '$_POST[name]' AND  UserId = $UserId";
+$checkOpportunityName = "SELECT * FROM opportunities WHERE Name = '$_POST[name]' AND  UserID = $UserID";
 
 // Variable $result hold the connection data and the query
 $result = $conn-> query($checkOpportunityName);
@@ -38,12 +38,12 @@ database and the opportunity is created
 $name = $_POST['name'];
 $amount = $_POST['amount'];
 $stage = $_POST['stage'];
-$UserId = $_SESSION['UserId'];
-$AccountId = $_SESSION['AccountId'];
+$UserID = $_SESSION['UserID'];
+$AccountID = $_SESSION['AccountID'];
 
 
 // Query to save opportunity to the database
-$query = "INSERT INTO opportunities ( UserId,Name, Amount, Stage, AccountId) VALUES ('$UserId', '$name', '$amount', '$stage', '$AccountId')";
+$query = "INSERT INTO opportunities ( UserID,Name, Amount, Stage, AccountID) VALUES ('$UserID', '$name', '$amount', '$stage', '$AccountID')";
 
 if (mysqli_query($conn, $query)) {
   echo "<div class='alert alert-success mt-4' role='alert'><h3>Your opportunity has been created.</h3></div>";
